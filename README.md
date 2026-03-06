@@ -78,21 +78,7 @@ Regras aplicadas na ingestao:
 - Embeddings de cada chunk
 - Armazenamento em PostgreSQL + pgvector
 
-## 5) Buscar por pergunta unica
-
-```bash
-python3 src/search.py "Qual o faturamento da Empresa SuperTechIABrazil?"
-```
-
-Fluxo de busca:
-
-- Vetoriza a pergunta
-- Executa `similarity_search_with_score(query, k=10)`
-- Monta prompt com contexto
-- Chama LLM
-- Responde estritamente com base no contexto
-
-## 6) Chat via CLI
+## 5) Chat via CLI
 
 ```bash
 python3 src/chat.py
